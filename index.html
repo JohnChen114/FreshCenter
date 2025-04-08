@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>幸福治療所</title>
-
-<link rel="stylesheet" href="style.css">
-
-  </head>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
   <!-- 導覽列 -->
@@ -19,65 +17,28 @@
   </nav>
 
   <header>
-    <h1>幸福治療所 🌿</h1>
+    <h1>清新治療所 🌿</h1>
     <p>用心陪伴，專業療癒</p>
   </header>
 
   <main>
     <section>
-      <h2>我們的理念</h2>
+      <h2 class="section-title">我們的理念</h2>
       <p>幸福治療所致力於提供一個安心、安全、專業的療癒空間，陪伴每一位來訪者走過成長與復原的旅程。</p>
     </section>
-<section class="gallery">
-  <h2>療癒空間一角</h2>
-  <div class="gallery-grid">
-    <img src="images/room1.jpg" alt="治療室1" />
-    <img src="images/room2.jpg" alt="治療室2" />
-    <img src="images/room3.jpg" alt="治療室3" />
-  </div>
-</section>
 
-<script>
-  // 表單提交成功提示
-  document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // 防止頁面重新載入
-    alert("感謝您的預約，我們會儘快與您聯繫！");
-  });
-
-  // 返回頂部按鈕
-  const backToTopButton = document.createElement("button");
-  backToTopButton.textContent = "返回頂部";
-  backToTopButton.style.position = "fixed";
-  backToTopButton.style.bottom = "30px";
-  backToTopButton.style.right = "30px";
-  backToTopButton.style.backgroundColor = "#85c1b4";
-  backToTopButton.style.color = "white";
-  backToTopButton.style.padding = "10px 20px";
-  backToTopButton.style.border = "none";
-  backToTopButton.style.borderRadius = "8px";
-  backToTopButton.style.cursor = "pointer";
-  backToTopButton.style.display = "none";
-  document.body.appendChild(backToTopButton);
-
-  // 顯示/隱藏返回頂部按鈕
-  window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  };
-
-  // 點擊返回頂部按鈕
-  backToTopButton.onclick = function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-</script>
-
+    <section class="gallery">
+      <h2 class="section-title">療癒空間一角</h2>
+      <div class="gallery-grid">
+        <img src="images/room1.jpg" alt="治療室1" />
+        <img src="images/room2.jpg" alt="治療室2" />
+        <img src="images/room3.jpg" alt="治療室3" />
+      </div>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 幸福治療所｜All Rights Reserved
+        <p>&copy; 2025 幸福治療所｜All Rights Reserved</p>
   </footer>
 
 </body>

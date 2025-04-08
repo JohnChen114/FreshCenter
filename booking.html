@@ -2,11 +2,9 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>幸福治療所｜預約表單</title>
-
-<link rel="stylesheet" href="style.css">
-
-  </head>
+  <title>預約諮詢 - 幸福治療所</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
 
   <!-- 導覽列 -->
@@ -18,59 +16,47 @@
     </ul>
   </nav>
 
-  <h1>預約諮詢</h1>
+  <header>
+    <h1>預約諮詢</h1>
+    <p>請填寫以下資訊，我們會儘快與您聯繫。</p>
+  </header>
 
-  <form id="bookingForm">
-    <label for="name">姓名：</label>
-    <input type="text" id="name" name="name" required>
+  <main>
+    <form id="bookingForm">
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="phone">電話：</label>
-    <input type="tel" id="phone" name="phone" required>
+      <label for="phone">電話：</label>
+      <input type="tel" id="phone" name="phone" required>
 
-    <label for="service">療程類型：</label>
-    <select id="service" name="service" required>
-      <option value="">請選擇</option>
-      <option value="心理諮詢">心理諮詢</option>
-      <option value="職能治療">職能治療</option>
-      <option value="語言治療">語言治療</option>
-    </select>
+      <label for="service">療程類型：</label>
+      <select id="service" name="service" required>
+        <option value="">請選擇</option>
+        <option value="心理諮詢">心理諮詢</option>
+        <option value="職能治療">職能治療</option>
+        <option value="語言治療">語言治療</option>
+      </select>
 
-    <label for="date">預約日期：</label>
-    <input type="date" id="date" name="date" required>
+      <label for="date">預約日期：</label>
+      <input type="date" id="date" name="date" required>
 
-    <label for="message">備註說明：</label>
-    <textarea id="message" name="message" rows="4"></textarea>
+      <label for="message">備註說明：</label>
+      <textarea id="message" name="message" rows="4"></textarea>
 
-    <button type="submit">送出預約</button>
-  </form>
+      <button type="submit">送出預約</button>
+    </form>
+  </main>
 
   <footer>
     &copy; 2025 幸福治療所｜All Rights Reserved
   </footer>
 
-<script>
-  document.getElementById("bookingForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // 阻止預設送出行為
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-
-    // 檢查必填欄位
-    if (!name || !phone || !service || !date) {
-      alert("請完整填寫所有必填欄位 🙏");
-      return;
-    }
-
-    // 模擬送出成功
-    alert("預約成功！我們將盡快與您聯繫 💚");
-
-    // 清空表單
-    this.reset();
-  });
-</script>
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("感謝您的預約，我們會儘快與您聯繫！");
+    });
+  </script>
 
 </body>
 </html>
-

@@ -1,56 +1,49 @@
-/* 字體與背景 */
+//* 基本樣式設定 */
 body {
   font-family: "Noto Sans TC", sans-serif;
-  background-color: #f4f8f7;
+  background-color: #f5f7f6; /* 柔和背景色 */
   margin: 0;
-  padding: 0;
   color: #333;
-  line-height: 1.6;
 }
 
-/* 導覽列 */
 nav {
-  background-color: #85c1b4;
+  background-color: #85c1b4; /* 淡薄荷綠背景 */
   padding: 15px 0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+  display: inline;
+  margin-right: 20px;
 }
 
 nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: 1.2em;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #4a7c74;
+  color: #4a7c74; /* 深薄荷綠 */
 }
 
-/* 頁首區塊 */
 header {
   text-align: center;
-  padding: 60px 20px 40px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 header h1 {
   font-size: 2.5em;
   color: #4a7c74;
-  margin-bottom: 10px;
 }
 
 header p {
@@ -58,56 +51,15 @@ header p {
   color: #666;
 }
 
-/* 主要內容區 */
-main {
-  padding: 40px 20px;
-}
-
-section {
-  max-width: 800px;
-  margin: auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-h2, h3 {
+/* 新增的 .section-title 樣式 */
+.section-title {
+  font-size: 2em;
   color: #4a7c74;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.05em;
-}
-
-/* 按鈕樣式（可重用） */
-button {
-  background-color: #85c1b4;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #6ea99f;
-}
-
-/* 頁尾 */
-footer {
-  background-color: #85c1b4;
-  padding: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  color: white;
-  font-size: 0.95em;
-  margin-top: 50px;
-  border-top: 4px solid #6ea99f;
 }
 
+/* 團隊頁 */
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -119,7 +71,7 @@ footer {
 .team-card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 260px;
   text-align: center;
@@ -136,6 +88,47 @@ footer {
   margin-bottom: 15px;
 }
 
+/* 預約表單 */
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #85c1b4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6ea99f;
+}
+
+/* 圖片展示 */
 .gallery {
   max-width: 1000px;
   margin: 40px auto;
@@ -143,89 +136,55 @@ footer {
 }
 
 .gallery h2 {
+  font-size: 2em;
   color: #4a7c74;
   margin-bottom: 20px;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0 20px;
 }
 
 .gallery-grid img {
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  header {
-    padding: 40px 20px;
-  }
-
-  .team {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .team-card {
-    width: 90%;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-/* 滾動時顯示動畫 */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  opacity: 0;
-  animation: fadeInUp 0.6s forwards;
-}
-
-.team-card, .gallery-grid img {
-  transition: transform 0.3s ease-in-out;
-}
-
-.team-card:hover, .gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* 按鈕懸浮效果 */
-button {
+/* Footer */
+footer {
   background-color: #85c1b4;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-button:hover {
-  background-color: #6ea99f;
-  transform: translateY(-2px);
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #4a7c74;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 1em;
 }
 
