@@ -3,63 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>幸福治療所｜預約表單</title>
-  <style>
-    /* 加入相同的導覽列樣式 */
-    body {
-  font-family: "Noto Sans TC", sans-serif;
-  background-color: #f5f7f6;
-  padding: 30px;
-  color: #333;
-}
 
-form {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
+<link rel="stylesheet" href="style.css">
 
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
-}
-
-button {
-  background-color: #85c1b4;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1.1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #6ea99f;
-}
-
-footer {
-  background-color: #85c1b4;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
-
-  </style>
-</head>
+  </head>
 <body>
 
   <!-- 導覽列 -->
@@ -100,6 +47,29 @@ footer {
   <footer>
     &copy; 2025 幸福治療所｜All Rights Reserved
   </footer>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // 阻止預設送出行為
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+
+    // 檢查必填欄位
+    if (!name || !phone || !service || !date) {
+      alert("請完整填寫所有必填欄位 🙏");
+      return;
+    }
+
+    // 模擬送出成功
+    alert("預約成功！我們將盡快與您聯繫 💚");
+
+    // 清空表單
+    this.reset();
+  });
+</script>
 
 </body>
 </html>

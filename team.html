@@ -1,67 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>幸福治療所｜我們的團隊</title>
-  <style>
-    /* 加入相同的導覽列樣式 */
-    body {
-  font-family: "Noto Sans TC", sans-serif;
-  background-color: #f5f7f6;
-  margin: 0;
-  padding: 20px;
-  color: #333;
-}
-
-header {
-  text-align: center;
-  padding: 30px;
-}
-
-header h1 {
-  font-size: 2.5em;
-  color: #4a7c74;
-}
-
-section {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-
-section h2 {
-  font-size: 1.8em;
-  color: #333;
-}
-
-.card {
-  background-color: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 250px;
-  margin-bottom: 30px;
-}
-
-.card img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.card p {
-  color: #666;
-  font-size: 1.1em;
-}
-
-  </style>
+  <meta charset="UTF-8" />
+  <title>我們的團隊 - 幸福治療所</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- 導覽列 -->
   <nav>
     <ul>
       <li><a href="index.html">首頁</a></li>
@@ -71,29 +15,28 @@ section h2 {
   </nav>
 
   <header>
-    <h1>我們的團隊</h1>
+    <h1>我們的團隊 👩‍⚕️👨‍⚕️</h1>
     <p>專業、溫暖、用心陪伴每一位來訪者</p>
   </header>
 
   <main>
-    <section>
-      <h2>林心語 治療師</h2>
-      <p>擅長情緒輔導與兒童行為治療，擁有十年以上心理諮詢經驗。</p>
-    </section>
-    <section>
-      <h2>陳柏睿 職能治療師</h2>
-      <p>專精於職能重建與感覺統合訓練，致力於提升生活品質。</p>
-    </section>
-    <section>
-      <h2>王怡文 語言治療師</h2>
-      <p>專注於語言發展與溝通障礙，熱愛與孩子們互動。</p>
+    <section class="team">
+      <div class="team-card">
+        <img src="images/therapist1.jpg" alt="心理師A" />
+        <h3>林心怡 心理師</h3>
+        <p>專長：情緒管理、親子溝通、憂鬱焦慮</p>
+      </div>
+      <div class="team-card">
+        <img src="images/therapist2.jpg" alt="語言治療師B" />
+        <h3>張哲偉 語言治療師</h3>
+        <p>專長：兒童語言發展、構音訓練、自閉症療育</p>
+      </div>
+      <!-- 你可以新增更多卡片 -->
     </section>
   </main>
 
   <footer>
     &copy; 2025 幸福治療所｜All Rights Reserved
   </footer>
-
 </body>
 </html>
-
